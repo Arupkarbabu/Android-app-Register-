@@ -5,8 +5,6 @@ require 'init.php';
 $name=$_POST["name"];
 $rollno=$_POST["rollno"];
 $department=$_POST["department"];
-$longitude=$_POST["longitudee"];
-$latitude=$_POST["latitude"];
 
 
 
@@ -18,7 +16,8 @@ $latitude=$_POST["latitude"];
 
 
 
-$sql_query="INSERT INTO oder(name,rollno,department,longitude,latitude)VALUES('$name','$rollno','$department','$longitude','$latitude')";
+
+$sql_query="INSERT INTO Register(name,rollno,department)VALUES('$name','$rollno','$department')";
 
 if ($db->query($sql_query)==TRUE) {
 	
